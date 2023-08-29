@@ -1,0 +1,11 @@
+<form action="">
+  <label for="search"></label>
+  <input type="text" id="search" name="search" #q>
+  <button type="button" (click)="search(q.value)">Search</button>
+</form>
+<div *ngFor="let i of results">
+  <img src="{{i}}" alt="">
+</div>
+<ng-template #noContent>
+  <h2>No content</h2>
+</ng-template>
